@@ -9,6 +9,14 @@
 using namespace sf;
 using namespace std;
 
+// TO DO:
+//
+// [04-22-25]
+// 	- Add font file
+// 	- Review code for drawing points
+//	- Review code for optional color choice menu
+//	- Implement code for calculating midpoints
+
 int main()
 {
 	// Create a video mode object
