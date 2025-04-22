@@ -24,7 +24,7 @@ int main()
     
     // Create and load font
     Font font;
-    font.loadFromFile("fonts/KOMIKAP_.tff");
+    font.loadFromFile("fonts/KOMIKAP_.tff"); // Replace with own font file
     
     // Load font into text
     text.setFont(font);
@@ -75,7 +75,10 @@ int main()
 			    {
 				if (event.type == sf::Event::MouseButtonPressed) ///fourth click (I think this is the code for fourth click? Or maybe if vertices.size() == 4?)
 				{
-					points.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));	///push back to points vector
+					if (event.mouseButton.button == sf::Mouse::Left)
+					{
+						points.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));	///push back to points vector
+					}
 				}
 			    }
 			}
@@ -113,6 +116,32 @@ int main()
 		    window.draw(rect);
 		}
 		///TODO:  Draw points
+		// ======================== REVIEW ========================
+		// for (int i = 0; i < points.size(); i++)
+		// {
+		// 	CircleShape circle(1);
+		//	circle.setRadius(1);
+		//	circle.setPosition(Vector2f(points[i].x, points[i].y));
+		//	circle.setFillColor(Color::Green);
+		//	window.draw(circle);
+		// }
+		//
+		// Optional: (Choose a color?)
+		// 
+		//	cout << "Choose a color: " << endl;
+		//	Color colorTypes[4] = { Color::Red, Color::Green, Color::Blue, Color::Yellow };
+		//	string colorNames[4] = { "Red", "Green", "Blue", "Yellow" };
+		//	Color colorChoice;
+		//
+		//	for (int i = 1; i < colorTypes.size(); i++)
+		//	{
+		//		cout << i << ". " << colorNames[i - 1] << endl;
+		//	}
+		//	cin >> input;
+		//	colorChoice = colorTypes[input - 1];
+		//	circle.setFillColor(colorChoice);
+		// ==========================================================
+		
 		window.display();
 	}
 }
