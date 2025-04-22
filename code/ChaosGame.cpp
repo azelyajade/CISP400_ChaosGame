@@ -18,7 +18,33 @@ int main()
 	
 	vector<Vector2f> vertices;
 	vector<Vector2f> points;
-
+    
+    // Create text
+    Text text;
+    
+    // Create and load font
+    Font font;
+    font.loadFromFile("fonts/KOMIKAP_.tff");
+    
+    // Load font into text
+    text.setFont(font);
+    
+    // Assign string to print out instructions
+    text.setString("This is a test statement.");
+    
+    // Change font size and color
+    text.setCharacterSize(50);
+    text.setFillColor(Color::White);
+    
+    // Position the text (copied off Timber.cpp)
+ 	FloatRect textRect = messageText.getLocalBounds();
+	messageText.setOrigin(textRect.left +
+		textRect.width / 2.0f,
+		textRect.top +
+		textRect.height / 2.0f);
+	messageText.setPosition(1920 / 2.0f, 1080 / 2.0f);
+	scoreText.setPosition(20, 20);
+	
 	while (window.isOpen())
 	{
 		/*
