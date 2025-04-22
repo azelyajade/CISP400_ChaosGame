@@ -37,13 +37,12 @@ int main()
     text.setFillColor(Color::White);
     
     // Position the text (copied off Timber.cpp)
- 	FloatRect textRect = messageText.getLocalBounds();
-	messageText.setOrigin(textRect.left +
+ 	FloatRect textRect = text.getLocalBounds();
+	text.setOrigin(textRect.left +
 		textRect.width / 2.0f,
 		textRect.top +
 		textRect.height / 2.0f);
-	messageText.setPosition(1920 / 2.0f, 1080 / 2.0f);
-	scoreText.setPosition(20, 20);
+	text.setPosition(1920 / 2.0f, 1080 / 2.0f);
 	
 	while (window.isOpen())
 	{
@@ -74,8 +73,10 @@ int main()
 			    }
 			    else if(points.size() == 0)
 			    {
-				///fourth click
-				///push back to points vector
+				if (event.type == sf::Event::MouseButtonPressed) ///fourth click (I think this is the code for fourth click? Or maybe if vertices.size() == 4?)
+				{
+					points.push_back(Vector2f(event.mouseButton.x, event.mouseButton.y));	///push back to points vector
+				}
 			    }
 			}
 		    }
