@@ -35,6 +35,7 @@ int main()
 	vector<Vector2f> points;
 
 	// Font and text
+	Color defaultColor = Color::Green;
 	Font font;
 	if (!font.loadFromFile("KOMIKAP_.ttf")) // load font
 	{
@@ -46,14 +47,14 @@ int main()
 	text.setFont(font);
 	text.setString("Welcome to the Chaos Game!");
 	text.setCharacterSize(50);
-	text.setFillColor(Color::Green);
+	text.setFillColor(defaultColor);
 	text.setPosition(14, 14);
 
 	Text prompt;
 	prompt.setFont(font);
 	prompt.setString("Press 'SPACE' to continue...");
 	prompt.setCharacterSize(25);
-	prompt.setFillColor(Color::Green);
+	prompt.setFillColor(defaultColor);
 
 	FloatRect promptBounds = prompt.getLocalBounds();
 	prompt.setOrigin(0, promptBounds.height);
@@ -169,7 +170,7 @@ int main()
 
 			if (points.size() == 1000)
 			{
-				prompt.setFillColor(Color::Green);
+				prompt.setFillColor(defaultColor);
 				prompt.setString("Nice! Press 'R' to restart...");
 
 				if (Keyboard::isKeyPressed(Keyboard::R))
@@ -180,7 +181,7 @@ int main()
 					text.setString("Press 'SPACE' to choose a color");
 					prompt.setString("");
 					showMenu = false;
-					text.setFillColor(Color::Green);
+					text.setFillColor(defaultColor);
 				}
 			}
 		}
