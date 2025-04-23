@@ -25,7 +25,7 @@ int main()
 
 	// Font and text
 	Font font;
-	if (!font.loadFromFile("fonts./KOMIKAP_.ttf")) // load font
+	if (!font.loadFromFile("KOMIKAP_.ttf")) // load font
 	{
 		cout << "Unable to load font :(\n";
 		return -1;
@@ -91,7 +91,7 @@ int main()
 
 		if (points.size() > 0)
 		{
-			while (points.size() < 100)
+			while (points.size() < 1000)
 			{
 				// initialize last point as a temp value
 				Vector2f temp = points.back();
@@ -117,7 +117,7 @@ int main()
 		****************************************
 		*/
 		window.clear();
-		for (int i = 0; i < vertices.size(); i++)
+		for (unsigned long int i = 0; i < vertices.size(); i++)
 		{
 			RectangleShape rect(Vector2f(10, 10));
 			rect.setPosition(Vector2f(vertices[i].x, vertices[i].y));
@@ -125,7 +125,7 @@ int main()
 			window.draw(rect);
 		}
 		///TODO:  Draw points
-		for (int i = 0; i < points.size(); i++)
+		for (unsigned long int i = 0; i < points.size(); i++)
 		{
 			CircleShape circle(1);
 			circle.setRadius(1);
