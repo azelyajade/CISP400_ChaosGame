@@ -134,6 +134,8 @@ int main()
 			window.draw(circle);
 		}
 
+		// Draw text
+		window.draw(text);
 		window.display();
 	}
 }
