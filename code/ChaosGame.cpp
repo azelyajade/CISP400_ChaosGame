@@ -104,7 +104,7 @@ int main()
 	
 		if(points.size() > 0)
 		{
-		    // updated code:
+			// updated code:
             while (points.size() < 100)
             {
         	    Vector2f temp = points.back();
@@ -118,7 +118,6 @@ int main()
                 
         	    points.push_back(midpoint);
             }
-
 		}
 	
 		/*
