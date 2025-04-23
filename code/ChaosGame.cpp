@@ -39,11 +39,11 @@ int main()
 	text.setPosition(14, 14);
 	
 	Text text2; // set text (instructions)
-	text.setFont(font);
-	text.setString("Pick any 3 points. Then pick a 4th point to generate Sierpinski Triangle!");
-	text.setCharacterSize(50);
-	text.setFillColor(Color::White);
-	text.setPosition(20, 20);
+	text2.setFont(font);
+	text2.setString("Pick any 3 points. Then pick a 4th point to generate Sierpinski Triangle!");
+	text2.setCharacterSize(50);
+	text2.setFillColor(Color::White);
+	text2.setPosition(20, 20);
 
 
 	while (window.isOpen())
