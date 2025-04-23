@@ -143,6 +143,7 @@ int main()
 
 		// Draw text
 		window.draw(text);
+		window.draw(text2);
 		window.display();
 	}
 }
