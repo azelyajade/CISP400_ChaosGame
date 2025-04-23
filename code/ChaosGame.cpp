@@ -33,18 +33,10 @@ int main()
 
 	Text text; // set text settings
 	text.setFont(font);
-	text.setString("Welcome to the Chaos Game!");
-	text.setCharacterSize(100);
-	text.setFillColor(Color::Red);
-	text.setPosition(14, 14);
-	
-	Text text2; // set text (instructions)
-	text2.setFont(font);
-	text2.setString("Pick any 3 points. Then pick a 4th point to generate Sierpinski Triangle!");
-	text2.setCharacterSize(50);
-	text2.setFillColor(Color::White);
-	text2.setPosition(20, 20);
-
+	text.setString("Pick any 3 points. Then pick a 4th point to generate Sierpinski Triangle!");
+	text.setCharacterSize(50);
+	text.setFillColor(Color::White);
+	text.setPosition(20, 20);
 
 	while (window.isOpen())
 	{
@@ -143,7 +135,6 @@ int main()
 
 		// Draw text
 		window.draw(text);
-		window.draw(text2);
 		window.display();
 	}
 }
