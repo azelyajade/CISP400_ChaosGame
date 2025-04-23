@@ -154,3 +154,52 @@ int main()
 		window.display();
 	}
 }
+
+
+
+// TO REVIEW:
+/**
+	if (points.size() > 0)
+		{
+			if (event.type == sf::Event::MouseButtonPressed) ///fourth click (I think this is the code for fourth click? Or maybe if vertices.size() == 4?)
+			{
+				if (event.mouseButton.button == sf::Mouse::Left)
+				{
+					for (int i = 0; i < 100; i++)
+					{
+						Vector2f previousPoint;
+						Vector2f randVert;
+						Vector2f newCoord;
+
+						int randNum = rand() % 3;
+						previousPoint = points.back();
+
+						randVert.push_back(vertices[randNum - 1].x, vertices[randNum - 1].y;
+						float newPointX = (previousPoint[i].x + randVert[i].x) / 2;
+						float newPointY = (previousPoint[i].y + randVert[i].y) / 2;
+
+						newCoord.push_back(newPointX, newPointY);
+						points.push_back(newCoord.x, newCoord.y);
+					}
+				}
+				///generate more point(s)
+				///select random vertex
+				///calculate midpoint between random vertex and the last point in the vector
+				///push back the newly generated coord.
+				/// 
+				///
+				/// Vector2f previousPoint = points.back();
+				/// int randNum = rand() % 3
+				/// Vector2f randVert.push_back(vertices[randNum - 1].x, vertices[randNum - 1].y);
+				/// float newPointX = (previousPoint[i].x + randVert[i].x) / 2;
+				/// float newPointY = (previousPoint[i].y + randVert[i].y) / 2;
+				/// 
+				/// Vector2f newCoord;
+				/// Vector2f newCoord.push_back(newPointX, newPointY);
+				/// points.push_back(newCoord[i].x, newCoord[i].y);
+				/// 
+				/// 
+
+			}
+		}
+*/
