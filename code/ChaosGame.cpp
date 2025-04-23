@@ -137,13 +137,14 @@ int main()
 		// Optional: (Choose a color?)
 		// 
 		//	cout << "Choose a color: " << endl;
-		//	Color colorTypes[4] = { Color::Red, Color::Green, Color::Blue, Color::Yellow };
+		//	Color<vector> colorTypes = { Color::Red, Color::Green, Color::Blue, Color::Yellow };
 		//	string colorNames[4] = { "Red", "Green", "Blue", "Yellow" };
 		//	Color colorChoice;
 		//
 		//	for (int i = 1; i < colorTypes.size(); i++)
 		//	{
 		//		cout << i << ". " << colorNames[i - 1] << endl;
+		//		// text.setString(colorNames[i - 1];
 		//	}
 		//	cin >> input;
 		//	colorChoice = colorTypes[input - 1];
