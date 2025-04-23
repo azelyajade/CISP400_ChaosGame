@@ -19,6 +19,7 @@ std::string colorToString(Color& color)
 	if (color == Color::Green) return "Green";
 	if (color == Color::Blue) return "Blue";
 	if (color == Color::Yellow) return "Yellow";
+	return "Color";
 }
 int main()
 {
