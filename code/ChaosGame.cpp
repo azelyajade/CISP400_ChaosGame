@@ -104,10 +104,21 @@ int main()
 	
 		if(points.size() > 0)
 		{
-		    ///generate more point(s)
-		    ///select random vertex
-		    ///calculate midpoint between random vertex and the last point in the vector
-		    ///push back the newly generated coord.
+		    // updated code:
+            while (points.size() < 100)
+            {
+        	    Vector2f temp = points.back();
+
+        	    int randNum = rand() % 3;
+        	    Vector2f randVert(vertices[randNum].x, vertices[randNum].y);
+
+        	    float midX = (temp.x + randVert.x) / 2.0;
+        	    float midY = (temp.y + randVert.y) / 2.0;
+        	    Vector2f midpoint(midX, midY);
+                
+        	    points.push_back(midpoint);
+            }
+
 		}
 	
 		/*
